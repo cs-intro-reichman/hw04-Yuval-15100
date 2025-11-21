@@ -185,10 +185,7 @@ public class ArrCharOps {
             return -1; 
         } else if (str1.length() > str2.length()) {
             return 1;
-        } else (str1.length() == str2.length()) {
-            return 0;
-        }
-
-        return -2;
+        } else {
+            return 0; }
     }
 }
