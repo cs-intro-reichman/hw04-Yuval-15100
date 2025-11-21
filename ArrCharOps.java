@@ -169,6 +169,9 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
 
+        if (str1.length() == 0 || str2.length() == 0) {
+            return -2; }
+
         String theShorter = str1;
 
         if (str1.length() > str2.length()) {
