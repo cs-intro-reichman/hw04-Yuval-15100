@@ -37,16 +37,22 @@ public class KeywordsDetector {
         for (int a = 0; a < newSentence[currentSen].length(); a++) {
             
             for (int b = 0; b < keywords.length; b++) {
+
+                boolean match = false;
             
+                if (a + keywords[b].length() <= newSentence[currentSen].length()) {
+                    
                 if (keywords[b].charAt(0) == newSentence[currentSen].charAt(a)) {
-                    boolean match = true; 
-            
+                    
+                match = true;
+                    
             for (int i = 1; i < keywords[b].length(); i++) {
                 if (keywords[b].charAt(i) != newSentence[currentSen].charAt(i + a)) {
                     match = false;
                     break; }
 
                 }
+            }
 
                 if (match) {
                     match1 = true;
